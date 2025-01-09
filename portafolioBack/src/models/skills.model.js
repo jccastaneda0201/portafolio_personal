@@ -6,7 +6,7 @@ const skillSchema = new Schema(
     descripcion: { type: String, maxlength: 300 }, // Breve descripción de la habilidad
     tecnologias: [{ type: String }], // Lista de tecnologías utilizadas
   },
-  { timestamps: true }
+  { timestamps: true, versionKey: false }
 ); // Agrega createdAt y updatedAt automáticamente
 
 const Skill = model("Skill", skillSchema);
