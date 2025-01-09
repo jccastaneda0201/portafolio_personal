@@ -4,11 +4,11 @@ const projectSchema = new Schema(
   {
     titulo: { type: String, required: true },
     descripcion: { type: String, required: true },
-    tecnologias: [{ type: String }], // Lista de tecnologías utilizadas
+    tecnologias: [{ type: String }],
     categoria: { type: String, required: true },
-    urlGitHub: { type: String }, // URL del proyecto o demo
-    urlDemo: { type: String }, // URL del proyecto o demo
-    imagenDestacada: { type: String }, // URL de la imagen
+    urlGitHub: { type: String },
+    urlDemo: String,
+    imagenDestacada: String,
   },
   { timestamps: true, versionKey: false }
 );

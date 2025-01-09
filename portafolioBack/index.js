@@ -1,12 +1,13 @@
 // Server creation and configuration
-const http = require("http");
+const http = require("node:http");
 const app = require("./src/app");
 
 // Config .env
 require("dotenv").config();
 
-// Cofifuracion BD
-require("./src/config/db");
+//configuracion de la BD
+const { dbConnection } = require("./src/config/db");
+dbConnection();
 
 // Server creation
 const server = http.createServer(app);

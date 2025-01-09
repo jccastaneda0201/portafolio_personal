@@ -2,29 +2,19 @@ const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema(
   {
-    datosPersonales: {
-      nombre: { type: String, required: true },
-      apellido: { type: String, required: true },
-      fechaNacimiento: { type: Date, required: true },
-    },
-    descripcion: {
-      bio: { type: String, maxlength: 500 },
-      intereses: [{ type: String }], // Lista de intereses
-    },
-    contacto: {
-      nombre: { type: String },
-      email: { type: String, required: true, unique: true },
-      topic: { type: String },
-      mensaje: { type: String },
-    },
-    redesSociales: {
-      facebook: { type: String },
-      twitter: { type: String },
-      instagram: { type: String },
-      linkedin: { type: String },
-      github: { type: String },
-      websiteURL: { type: String },
-    },
+    nombre: { type: String, required: true },
+    apellido: { type: String, required: true },
+    fechaNacimiento: Date,
+    //About me
+    aboutme: String,
+    intereses: [{ type: String }],
+    //redes sociales
+    facebook: String,
+    twitter: String,
+    instagram: String,
+    linkedin: String,
+    github: String,
+    websiteURL: String,
   },
   { timestamps: true, versionKey: false }
 );

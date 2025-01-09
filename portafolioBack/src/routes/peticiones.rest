@@ -1,4 +1,4 @@
-@host = http://localhost:3000
+@host = http://localhost:3000/api
 
 @apiUsers = {{host}}/users
 @apiProjects = {{host}}/projects
@@ -8,6 +8,25 @@
 #####################
 #       USERS       #
 #####################
+
+GET {{apiUsers}}
+###
+POST {{apiUsers}}
+Content-Type: application/json
+
+{
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "fechaNacimiento": "1990-01-01",
+        "aboutme": "Soy desarrollador web apasionado por la tecnología.",
+        "intereses": ["programación", "diseño", "inteligencia artificial"],
+        "facebook": "https://facebook.com/juanperez",
+        "twitter": "https://twitter.com/juanperez",
+        "instagram": "https://instagram.com/juanperez",
+        "linkedin": "https://linkedin.com/in/juanperez",
+        "github": "https://github.com/juanperez",
+        "websiteURL": "https://juanperez.com"
+  }
 
 
 
