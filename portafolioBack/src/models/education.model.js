@@ -2,12 +2,12 @@ const { Schema, model } = require("mongoose");
 
 const educationSchema = new Schema(
   {
-    institucion: { type: String, required: true },
-    titulo: { type: String, required: true },
-    fechaInicio: { type: Date, required: true },
+    institucion: String,
+    titulo: String,
+    fechaInicio: String,
     fechaFin: Date,
     descripcion: { type: String, maxlength: 500 },
-    skillTitle: { type: String, required: true },
+    skillTitle: { type: String },
     skillDescription: { type: String, maxlength: 300 },
     tecnologias: [{ type: String }],
   },
