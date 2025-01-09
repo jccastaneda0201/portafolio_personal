@@ -27,6 +27,28 @@ Content-Type: application/json
         "github": "https://github.com/juanperez",
         "websiteURL": "https://juanperez.com"
   }
+###
+
+PUT  {{apiUsers}}/677ff61b7384b391b6c9e3ce
+Content-Type: application/json
+
+{
+        "nombre": "Juan Carlos",
+        "apellido": "Castañeda",
+        "fechaNacimiento": "1990-01-01",
+        "aboutme": "Soy desarrollador web apasionado por la tecnología.",
+        "intereses": ["programación", "diseño", "inteligencia artificial"],
+        "facebook": "https://facebook.com/juanperez",
+        "twitter": "https://twitter.com/juanperez",
+        "instagram": "https://instagram.com/juanperez",
+        "linkedin": "https://linkedin.com/in/juanperez",
+        "github": "https://github.com/juanperez",
+        "websiteURL": "https://juanperez.com"
+  }
+
+###
+DELETE {{apiUsers}}/677ff61b7384b391b6c9e3ce
+
 
 
 

@@ -19,7 +19,31 @@ const createUser = async (req, res, next) => {
   }
 };
 
+const updateUsers = async (req, res, next) => {
+  const { userId } = req.params;
+  try {
+    const user = await User.findByIdAndUpdate(userId, req.body, {
+      new: true,
+    });
+    res.json(user);
+  } catch (error) {
+    next(error);
+  }
+};
+
+const destroyUser = async (req, res, next) => {
+  const { userId } = req.params;
+  try {
+    const user = await User.findByIdAndDelete(userId);
+    res.json(user);
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   createUser,
   getAllUsers,
+  updateUsers,
+  destroyUser,
 };
