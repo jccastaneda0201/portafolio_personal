@@ -15,7 +15,7 @@
     "init",
     "template"
   ],
-  "author": "Mario Girón Martín",
+  "author": "Juan Castaneda",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
