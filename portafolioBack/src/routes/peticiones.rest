@@ -1,0 +1,26 @@
+@host = http://localhost:3000
+
+@apiUsers = {{host}}/users
+@apiProjects = {{host}}/projects
+@apiEducation = {{host}}/education
+
+
+#####################
+#       USERS       #
+#####################
+
+
+
+
+
+
+#####################
+#      PROJECTS     #
+#####################
+
+
+
+
+#####################
+#     EDUCATION     #
+#####################

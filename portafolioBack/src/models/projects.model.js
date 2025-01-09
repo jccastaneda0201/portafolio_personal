@@ -13,5 +13,5 @@ const projectSchema = new Schema(
   { timestamps: true, versionKey: false }
 );
 
-const Project = model("Project", projectSchema);
+const Project = model("project", projectSchema);
 module.exports = Project;
