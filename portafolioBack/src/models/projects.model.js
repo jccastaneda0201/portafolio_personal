@@ -2,11 +2,11 @@ const { Schema, model } = require("mongoose");
 
 const projectSchema = new Schema(
   {
-    titulo: { type: String, required: true },
-    descripcion: { type: String, required: true },
+    titulo: { type: String, required: false },
+    descripcion: { type: String, required: false },
     tecnologias: [{ type: String }],
-    categoria: { type: String, required: true },
-    urlGitHub: { type: String },
+    categoria: { type: String, required: false },
+    urlGitHub: String,
     urlDemo: String,
     imagenDestacada: String,
   },

@@ -59,6 +59,21 @@ DELETE {{apiUsers}}/677ff61b7384b391b6c9e3ce
 #      PROJECTS     #
 #####################
 
+GET {{apiProjects}}
+###
+POST {{apiProjects}}
+Content-Type: application/json
+
+{
+        "nombre": "Proyecto 1",
+        "descripcion": "Este es un proyecto de desarrollo web.",
+        "tecnologias": ["React", "Node.js", "MongoDB"],
+        "categoria": "Desarrollo web",
+        "urlGitHub": "https://github.com/jccastaneda0201",
+        "urlDemo": "https://github.com/jccastaneda0201/Grupo_Musical",
+        "imagenDestacada": "https://via.placeholder.com/150"
+  }
+
 
 
 
