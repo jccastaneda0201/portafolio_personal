@@ -3,6 +3,8 @@
 @apiUsers = {{host}}/users
 @apiProjects = {{host}}/projects
 @apiEducation = {{host}}/education
+@apiContacto = {{host}}/contactos
+@apiLaboral = {{host}}/laboral
 
 
 #####################
@@ -65,7 +67,7 @@ POST {{apiProjects}}
 Content-Type: application/json
 
 {
-        "nombre": "Proyecto 1",
+        "titulo": "Proyecto 1",
         "descripcion": "Este es un proyecto de desarrollo web.",
         "tecnologias": ["React", "Node.js", "MongoDB"],
         "categoria": "Desarrollo web",
@@ -74,9 +76,125 @@ Content-Type: application/json
         "imagenDestacada": "https://via.placeholder.com/150"
   }
 
+###
+PUT  {{apiProjects}}/6780058e116a9eb66c4e2f02
+Content-Type: application/json
+
+{
+        "titulo": "Proyecto Calavento",
+        "descripcion": "Este es un proyecto de desarrollo web.",
+        "tecnologias": ["React", "Node.js", "MongoDB"],
+        "categoria": "Desarrollo web",
+        "urlGitHub": "https://github.com/jccastaneda0201",
+        "urlDemo": "https://github.com/jccastaneda0201/Grupo_Musical",
+        "imagenDestacada": "https://via.placeholder.com/150"
+  }
+
+###
+DELETE {{apiProjects}}/6780058e116a9eb66c4e2f02
+
 
 
 
 #####################
 #     EDUCATION     #
 #####################
+
+GET {{apiEducation}}
+###
+POST {{apiEducation}}
+Content-Type: application/json
+
+{
+        "institucion": "Universidad de La Laguna",
+        "titulo": "Ingeniería Informática",
+        "fechaInicio": "2015-09-01",
+        "fechaFin": "2020-06-01",
+        "descripcion": "Estudios de Ingeniería Informática en la Universidad de La Laguna.",
+        "skillTitle": "FULL STACK DEVELOPER",
+        "skillDescription": "Desarrollo de aplicaciones web, gestión de bases de datos, y desarrollo de APIs.",
+        "tecnologias": ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"]
+  }
+###
+PUT  {{apiEducation}}/6780071dc980cd9692901837
+Content-Type: application/json
+
+{
+        "institucion": "BootCamp ID",
+        "titulo": "Full Stack Developer",
+        "fechaInicio": "2015-09-01",
+        "fechaFin": "2020-06-01",
+        "descripcion": "Estudios de Ingeniería Informática en la Universidad de La Laguna.",
+        "skillTitle": "Angular",
+        "skillDescription": "Desarrollo de aplicaciones web, gestión de bases de datos, y desarrollo de APIs.",
+        "tecnologias": ["HTML", "CSS", "JavaScript", "Node.js", "MongoDB"]
+  }
+
+###
+DELETE {{apiEducation}}/6780071dc980cd9692901837
+
+
+#####################
+#     CONTACTOS    #
+#####################
+GET {{host}}/contactos
+###
+POST {{host}}/contactos
+Content-Type: application/json
+
+{
+        "nombre": "Juan Sebastian Martinez",
+        "email": "juan.perez@gmail.com",
+        "asunto": "Proyecto Laboral",
+        "mensaje": "Hola, me gustaría contactar contigo para hablar sobre un proyecto."
+  }
+###
+PUT  {{host}}/contactos/678114c632a699754a30ee79
+Content-Type: application/json
+
+{
+        "nombre": "Juan Carlos",
+        "apellido": "Castañeda",
+        "asunto": "Proyecto Laboral",
+        "email": "any",
+        "mensaje": "Hola, me gustaría contactar contigo para hablar sobre un proyecto."
+  }
+
+###
+DELETE {{host}}/contactos/678114c632a699754a30ee79
+
+#####################
+#     LABORAL       #
+#####################
+GET {{host}}/laboral
+###
+POST {{host}}/laboral
+Content-Type: application/json
+
+{
+  "titulo": "Desarrollador Full Stack",
+  "empresa": "Innovatech Solutions",
+  "ubicacion": "Ciudad de México, México",
+  "fechaInicio": "2018-07-01",
+  "fechaFin": "2021-12-31", 
+  "actual": false, 
+  "descripcion": "Desarrollo de aplicaciones web utilizando tecnologías modernas como React, Node.js y MongoDB. Implementación de soluciones escalables y optimización del rendimiento de la plataforma.",
+  "habilidades": ["React", "Node.js", "MongoDB", "Express", "TypeScript"]
+}
+###
+PUT  {{host}}/laboral/678116ac16f88aa85088f4ff
+Content-Type: application/json
+
+{
+  "titulo": "Desarrollador Full Stack",
+  "empresa": "Umbrella Solutions",
+  "ubicacion": "Ciudad de México, México",
+  "fechaInicio": "2018-07-01",
+  "fechaFin": "2021-12-31", 
+  "actual": false, 
+  "descripcion": "Desarrollo de aplicaciones web utilizando tecnologías modernas como React, Node.js y MongoDB. Implementación de soluciones escalables y optimización del rendimiento de la plataforma.",
+  "habilidades": ["React", "Node.js", "MongoDB", "Express", "TypeScript"]
+}
+###
+DELETE {{host}}/laboral/678116ac16f88aa85088f4ff
+

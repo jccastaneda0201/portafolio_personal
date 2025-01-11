@@ -1,11 +1,18 @@
+const {
+  getAllEducation,
+  createEducation,
+  updateEducation,
+  destroyEducation,
+} = require("../../controllers/education.controller");
+
 const router = require("express").Router();
 
-router.get("/");
+router.get("/", getAllEducation);
 
-router.post("/");
+router.post("/", createEducation);
 
-router.put("/:educationId");
+router.put("/:educationId", updateEducation);
 
-router.delete("/:educationId");
+router.delete("/:educationId", destroyEducation);
 
 module.exports = router;

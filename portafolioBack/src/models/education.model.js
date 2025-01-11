@@ -7,7 +7,7 @@ const educationSchema = new Schema(
     fechaInicio: String,
     fechaFin: Date,
     descripcion: { type: String, maxlength: 500 },
-    skillTitle: { type: String },
+    skillTitle: String,
     skillDescription: { type: String, maxlength: 300 },
     tecnologias: [{ type: String }],
   },

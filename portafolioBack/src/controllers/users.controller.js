@@ -35,7 +35,7 @@ const destroyUser = async (req, res, next) => {
   const { userId } = req.params;
   try {
     const user = await User.findByIdAndDelete(userId);
-    res.json(user);
+    res.json("User deleted");
   } catch (error) {
     next(error);
   }

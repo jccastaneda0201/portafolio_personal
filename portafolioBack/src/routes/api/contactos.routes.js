@@ -1,11 +1,22 @@
+const {
+  getAllContactos,
+  createContacto,
+  updateContacto,
+  destroyContacto,
+} = require("../../controllers/contactos.controll");
+const {
+  updateEducation,
+  destroyEducation,
+} = require("../../controllers/education.controller");
+
 const router = require("express").Router();
 
-router.get("/");
+router.get("/", getAllContactos);
 
-router.post("/");
+router.post("/", createContacto);
 
-router.put("/:educationId");
+router.put("/:contactoId", updateContacto);
 
-router.delete("/:educationId");
+router.delete("/:contactoId", destroyContacto);
 
 module.exports = router;

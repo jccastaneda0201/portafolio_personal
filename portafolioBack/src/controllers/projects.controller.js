@@ -21,7 +21,7 @@ const createProject = async (req, res, next) => {
 const updateProjects = async (req, res, next) => {
   const { projectId } = req.params;
   try {
-    const project = await User.findByIdAndUpdate(projectId, req.body, {
+    const project = await Project.findByIdAndUpdate(projectId, req.body, {
       new: true,
     });
     res.json(project);
@@ -33,8 +33,8 @@ const updateProjects = async (req, res, next) => {
 const destroyProject = async (req, res, next) => {
   const { projectId } = req.params;
   try {
-    const project = await User.findByIdAndDelete(userId);
-    res.json(project);
+    const project = await Project.findByIdAndDelete(projectId);
+    res.json("Project deleted");
   } catch (error) {
     next(error);
   }

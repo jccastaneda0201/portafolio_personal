@@ -4,7 +4,7 @@ const contactoSchema = new Schema(
   {
     nombre: String,
     email: { type: String, unique: true },
-    topic: String,
+    asunto: String,
     mensaje: String,
   },
   { timestamps: true, versionKey: false }
