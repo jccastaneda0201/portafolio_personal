@@ -1,7 +1,7 @@
 export default interface Project {
     titulo: String,
     descripcion: String,
-    tecnologias: [{ type: String }],
+    tecnologias: String,
     categoria: String,
     urlGitHub: String,
     urlDemo: String,

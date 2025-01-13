@@ -3,8 +3,8 @@ export default interface Education {
     titulo: String,
     fechaInicio: String,
     fechaFin: Date,
-    descripcion: { type: String, maxlength: 500 },
+    descripcion: String,
     skillTitle: String,
-    skillDescription: { type: String, maxlength: 300 },
-    tecnologias: [{ type: String }]
+    skillDescription: String,
+    tecnologias: String
 }

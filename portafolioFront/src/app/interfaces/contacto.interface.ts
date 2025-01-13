@@ -1,6 +1,6 @@
 export default interface Contacto {
     nombre: String,
-    email: { type: String, unique: true },
+    email: String,
     asunto: String,
     mensaje: String
 }

@@ -6,5 +6,5 @@ export default interface Laboral {
     fechaFin: Date,
     actual: Boolean,
     descripcion: String,
-    habilidades: [{ type: String }]
+    habilidades: String
 }
