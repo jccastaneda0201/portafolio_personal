@@ -9,6 +9,16 @@ const getAllLaboral = async (req, res, next) => {
   }
 };
 
+const getLaboralById = async (req, res, next) => {
+  const { laboralId } = req.params;
+  try {
+    const laboral = await Laboral.findById(laboralId);
+    res.json(laboral);
+  } catch (error) {
+    next(error);
+  }
+};
+
 const createLaboral = async (req, res, next) => {
   try {
     const laboral = await Laboral.create(req.body);
@@ -42,6 +52,7 @@ const destroyLaboral = async (req, res, next) => {
 
 module.exports = {
   getAllLaboral,
+  getLaboralById,
   createLaboral,
   updateLaboral,
   destroyLaboral,

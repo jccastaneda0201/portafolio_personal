@@ -2,6 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const projectSchema = new Schema(
   {
+    id: Number,
     titulo: String,
     descripcion: String,
     tecnologias: [{ type: String }],

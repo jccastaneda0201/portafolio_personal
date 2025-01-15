@@ -9,6 +9,16 @@ const getAllProjects = async (req, res, next) => {
   }
 };
 
+const getProjectById = async (req, res, next) => {
+  const { projectId } = req.params;
+  try {
+    const project = await Project.findById(projectId);
+    res.json(project);
+  } catch (error) {
+    next(error);
+  }
+};
+
 const createProject = async (req, res, next) => {
   try {
     const project = await Project.create(req.body);
@@ -42,6 +52,7 @@ const destroyProject = async (req, res, next) => {
 
 module.exports = {
   getAllProjects,
+  getProjectById,
   createProject,
   updateProjects,
   destroyProject,

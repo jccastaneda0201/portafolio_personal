@@ -3,11 +3,14 @@ const {
   createLaboral,
   updateLaboral,
   destroyLaboral,
+  getLaboralById,
 } = require("../../controllers/laboral.controll");
 
 const router = require("express").Router();
 
 router.get("/", getAllLaboral);
+
+router.get("/:laboralId", getLaboralById);
 
 router.post("/", createLaboral);
 

@@ -20,6 +20,7 @@ Content-Type: application/json
         "nombre": "Juan",
         "apellido": "Pérez",
         "fechaNacimiento": "1990-01-01",
+        "trabajoActual": "Full Stack Developer",
         "aboutme": "Soy desarrollador web apasionado por la tecnología.",
         "intereses": ["programación", "diseño", "inteligencia artificial"],
         "facebook": "https://facebook.com/juanperez",
@@ -37,8 +38,9 @@ Content-Type: application/json
 {
         "nombre": "Juan Carlos",
         "apellido": "Castañeda",
-        "fechaNacimiento": "1990-01-01",
-        "aboutme": "Soy desarrollador web apasionado por la tecnología.",
+        "fechaNacimiento": "1990-04-19",
+        "trabajoActual": "Full Stack Developer",
+        "aboutme": "Soy desarrollador web apasionado por la tecnología, tengo 2 años de experiencia y aprendizaje continuo en el manejo de tecnologías modernas como Git, NodeJS, MySQL, TypeScript, Angular, Express.js y PHP. Recientemente completé un bootcamp en desarrollo fullstack en Bootcamp ID, lo que me permitió consolidar mis habilidades y fortalecer mi pasión por crear soluciones innovadoras y funcionales. Me entusiasma enfrentar nuevos desafíos, colaborar en equipos dinámicos y seguir creciendo en el mundo del desarrollo web.",
         "intereses": ["programación", "diseño", "inteligencia artificial"],
         "facebook": "https://facebook.com/juanperez",
         "twitter": "https://twitter.com/juanperez",
@@ -63,29 +65,31 @@ DELETE {{apiUsers}}/677ff61b7384b391b6c9e3ce
 
 GET {{apiProjects}}
 ###
+GET {{apiProjects}}/6781163616f88aa85088f4f9
+###
 POST {{apiProjects}}
 Content-Type: application/json
 
 {
-        "titulo": "Proyecto 1",
-        "descripcion": "Este es un proyecto de desarrollo web.",
+        "titulo": "Proyecto 2",
+        "descripcion": "Este es un proyecto de desarrollo web aprendidas en Id",
         "tecnologias": ["React", "Node.js", "MongoDB"],
         "categoria": "Desarrollo web",
-        "urlGitHub": "https://github.com/jccastaneda0201",
+        "urlGitHub": "https://github.com/jccastaneda0201/proyecto_hotel",
         "urlDemo": "https://github.com/jccastaneda0201/Grupo_Musical",
         "imagenDestacada": "https://via.placeholder.com/150"
   }
 
 ###
-PUT  {{apiProjects}}/6780058e116a9eb66c4e2f02
+PUT  {{apiProjects}}/6787c0fa034b6094a74df983
 Content-Type: application/json
 
 {
-        "titulo": "Proyecto Calavento",
-        "descripcion": "Este es un proyecto de desarrollo web.",
-        "tecnologias": ["React", "Node.js", "MongoDB"],
-        "categoria": "Desarrollo web",
-        "urlGitHub": "https://github.com/jccastaneda0201",
+        "titulo": "Proyecto Api-Store",
+        "descripcion": "Esta es una api de una tienda virtual creada con node.js ",
+        "tecnologias": ["Angular", "Node.js", "MongoDB"],
+        "categoria": "Desarrollo web Angular",
+        "urlGitHub": "https://github.com/jccastaneda0201/api-store",
         "urlDemo": "https://github.com/jccastaneda0201/Grupo_Musical",
         "imagenDestacada": "https://via.placeholder.com/150"
   }
@@ -168,21 +172,30 @@ DELETE {{host}}/contactos/678114c632a699754a30ee79
 #####################
 GET {{host}}/laboral
 ###
+GET {{host}}/laboral/67879cd0a20fab876a8e452f
+###
 POST {{host}}/laboral
 Content-Type: application/json
 
 {
   "titulo": "Desarrollador Full Stack",
-  "empresa": "Innovatech Solutions",
-  "ubicacion": "Ciudad de México, México",
+  "empresa": "Umbrella Solutions",
+  "ubicacion": "Barcelona, España",
   "fechaInicio": "2018-07-01",
   "fechaFin": "2021-12-31", 
   "actual": false, 
-  "descripcion": "Desarrollo de aplicaciones web utilizando tecnologías modernas como React, Node.js y MongoDB. Implementación de soluciones escalables y optimización del rendimiento de la plataforma.",
+  "funciones":[
+    "Participé en el equipo de creación y desarrollo del front-end de una web app de inicio a fin ayudando a su desarrollo y mejora en sus iteraciones con Next.js.",
+    "Desarrollo y mantenimiento de diferentes interfaces de administración de productos digitales.",
+    "Integración de servicios de tercero en el front-end en diferentes proyectos de web apps como Firebase Realtime DB, Firestore o Stripe.",
+    "Refactorización de código ya existente para hacerlo más escalable, mantenible y óptimo en rendimiento y legibilidad.",
+    "Desarrollo de landing pages con el framework Astro, aplicando buenas prácticas y metodología BEM."
+  ],
+  "descripcion": "Empresa de diseño y desarrollo de productos y soluciones digitales",
   "habilidades": ["React", "Node.js", "MongoDB", "Express", "TypeScript"]
 }
 ###
-PUT  {{host}}/laboral/678116ac16f88aa85088f4ff
+PUT  {{host}}/laboral/6781173316f88aa85088f505
 Content-Type: application/json
 
 {
@@ -192,7 +205,14 @@ Content-Type: application/json
   "fechaInicio": "2018-07-01",
   "fechaFin": "2021-12-31", 
   "actual": false, 
-  "descripcion": "Desarrollo de aplicaciones web utilizando tecnologías modernas como React, Node.js y MongoDB. Implementación de soluciones escalables y optimización del rendimiento de la plataforma.",
+  "funciones":[
+    "Participé en el equipo de creación y desarrollo del front-end de una web app de inicio a fin ayudando a su desarrollo y mejora en sus iteraciones con Next.js.",
+    "Desarrollo y mantenimiento de diferentes interfaces de administración de productos digitales.",
+    "Integración de servicios de tercero en el front-end en diferentes proyectos de web apps como Firebase Realtime DB, Firestore o Stripe.",
+    "Refactorización de código ya existente para hacerlo más escalable, mantenible y óptimo en rendimiento y legibilidad.",
+    "Desarrollo de landing pages con el framework Astro, aplicando buenas prácticas y metodología BEM."
+  ],
+  "descripcion": "Empresa de diseño y desarrollo de productos y soluciones digitales",
   "habilidades": ["React", "Node.js", "MongoDB", "Express", "TypeScript"]
 }
 ###

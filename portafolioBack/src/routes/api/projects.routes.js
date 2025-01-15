@@ -3,11 +3,14 @@ const {
   createProject,
   updateProjects,
   destroyProject,
+  getProjectById,
 } = require("../../controllers/projects.controller");
 
 const router = require("express").Router();
 
 router.get("/", getAllProjects);
+
+router.get("/:projectId", getProjectById);
 
 router.post("/", createProject);
 

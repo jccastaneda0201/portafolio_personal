@@ -6,6 +6,7 @@ const userSchema = new Schema(
     apellido: String,
     fechaNacimiento: Date,
     //About me
+    trabajoActual: String,
     aboutme: String,
     intereses: [{ type: String }],
     //redes sociales
