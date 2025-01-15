@@ -13,4 +13,8 @@ export class ProjectsService {
   async getAllProjects(): Promise<Project[]> {
     return lastValueFrom(this.httpClient.get<Project[]>(this.apiUrlProjects));
   }
+
+  async getProjectById(id: number): Promise<Project> {
+    return lastValueFrom(this.httpClient.get<Project>(`${this.apiUrlProjects}/${id}`));
+  }
 }

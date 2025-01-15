@@ -17,4 +17,9 @@ export class LaboralService {
   async getAllLaboral(): Promise<Laboral[]> {
     return lastValueFrom(this.httpClient.get<Laboral[]>(this.apiUrlLaboral));
   }
+
+  async getLaboralById(id: number): Promise<Laboral> {
+    return lastValueFrom(this.httpClient.get<Laboral>(`${this.apiUrlLaboral}/${id}`));
+  }
+
 }
