@@ -8,13 +8,27 @@
 
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <form action="" class="reveal-content">
+            <form
+              [formGroup]="formulario"
+              (ngSubmit)="createContacto()"
+              class="reveal-content"
+            >
               <div class="row">
                 <div class="col-md-7">
                   <div class="form-group">
                     <input
+                      type="text"
+                      class="form-control"
+                      formControlName="nombre"
+                      id="nombre"
+                      placeholder="Nombre"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
                       type="email"
                       class="form-control"
+                      formControlName="email"
                       id="email"
                       placeholder="Email"
                     />
@@ -23,39 +37,42 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="subject"
-                      placeholder="Subject"
+                      formControlName="asunto"
+                      id="asunto"
+                      placeholder="Asunto"
                     />
                   </div>
                   <div class="form-group">
                     <textarea
                       class="form-control"
+                      formControlName="mensaje"
                       rows="5"
-                      placeholder="Enter your message"
+                      placeholder="Escriba su mensaje"
                     ></textarea>
                   </div>
                   <button type="submit" class="btn btn-default btn-lg">
-                    Send
+                    Enviar
                   </button>
                 </div>
                 <div class="col-md-5 address-container">
                   <ul class="list-unstyled">
-                    <li>
+                    <!-- <li>
                       <span class="fa-icon">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <fa-icon [icon]="['fas', 'phone']"></fa-icon>
                       </span>
                       + 33 9 07 45 12 65
+                    </li> -->
+                    <li>
+                      <span class="fa-icon">
+                        <fa-icon [icon]="['fas', 'at']"></fa-icon>
+                      </span>
+                      jccastanedacamargo&#64;outlook.com
                     </li>
                     <li>
                       <span class="fa-icon">
-                        <i class="fa fa-at" aria-hidden="true"></i>
+                        <fa-icon [icon]="['fas', 'location-dot']"></fa-icon>
                       </span>
-                    </li>
-                    <li>
-                      <span class="fa-icon">
-                        <i class="fa fa fa-map-marker" aria-hidden="true"></i>
-                      </span>
-                      42 rue Moulbert 75016 Paris
+                      Barcelona, España
                     </li>
                   </ul>
                   <h3>Follow me on social networks</h3>

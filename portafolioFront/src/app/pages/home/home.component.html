@@ -8,15 +8,15 @@
         <div class="hero-full-wrapper">
           <div class="text-content">
             <h1>
-              Hello,<br />
+              Hello, my name is<br />
+              @for (usuarios of usuario; track $index) {
               <span id="typed-strings">
-                @for (usuarios of usuario; track $index) {
-                <span>I'm {{ usuarios.nombre }} {{ usuarios.apellido }}</span>
+                <span>{{ usuarios.nombre }} {{ usuarios.apellido }}</span>
                 <br />
-                <span>{{ usuarios.aboutme }}</span>
-                }
+                <span>{{ usuarios.trabajoActual }}</span>
               </span>
               <span id="typed"></span>
+              }
             </h1>
           </div>
         </div>

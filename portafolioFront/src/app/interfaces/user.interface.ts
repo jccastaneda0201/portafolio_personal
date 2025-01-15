@@ -4,6 +4,7 @@ export default interface User {
     nombre: String,
     apellido: String,
     fechaNacimiento: Date,
+    trabajoActual: String,
     //About me
     aboutme: String,
     intereses: String,

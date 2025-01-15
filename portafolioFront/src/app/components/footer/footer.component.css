@@ -5,7 +5,7 @@
 
   a {
     display: flex;
-    color: black;
+    color: #1b5e20;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
@@ -19,4 +19,8 @@
   p {
     font-size: 1.5rem !important;
   }
+}
+
+.footer {
+  margin-top: 2rem;
 }
